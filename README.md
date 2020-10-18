@@ -23,11 +23,19 @@ plot_gini_hist(data,y,threshold,ig,'Target','Feature',{'0':'No', '1':'Yes'})
 
 ```
 plots histograms before and after the split.
-    
-    
-## Examples on Random data
 
-For an example on real data: visualize the interative notebook on [nbviewer here](https://nbviewer.jupyter.org/github/omadios/logistics_CVRP/blob/master/Capacitated_vehicle_routing_problem_github.ipynb)
+Computing information Gain for all features is a useful way to select the most important features for a classification problem without particular assumptions about the feature distribution. Importantly, the effects of feature correlations and outliers need to be taken into account. 
+
+
+![Ranking](feature_rank_ig.png)
+|:--:|
+| Example of ranking of features in a Healthcare Dataset (see jupyter notebook for more details). In this formulation information gain is max at 0.5 |
+
+
+
+## Examples on Random Data:
+
+For an example on real data: visualize the interative notebook on [nbviewer here](https://nbviewer.jupyter.org/github/omadios/eda_information_gain/blob/main/Gini_Impurity_on_healthcare_tabular_data.ipynb)
 
 ```
 length=500
@@ -41,7 +49,7 @@ plot_gini_hist(data,y,threshold,ig,'Target')
 
 ```
 
-![Architecture](random_overlap.png)
+![Example 1](random_overlap.png)
 |:--:|
 | Example visualization of two distributions which overlap|
 
@@ -59,7 +67,7 @@ plot_gini_hist(data,y,threshold,ig,'Target')
 ```
 
 
-![Architecture](random_no_overlap.png)
+![Example 2](random_no_overlap.png)
 |:--:|
 | When distributions do not overlap there exist a split for which Gini Impurity is max i.e. 0.5 |
 
